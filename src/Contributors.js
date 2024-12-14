@@ -7,8 +7,8 @@ const Contributors = () => {
   useEffect(() => {
     const fetchContributors = async () => {
       try {
-        const internshipResponse = await axios.get('https://api.github.com/repos/tahiru0/internship/contributors');
-        const serverResponse = await axios.get('https://api.github.com/repos/tahiru0/Server/contributors');
+        const internshipResponse = await axios.get('https://api.github.com/repos/Mytien044/internshipda/contributors');
+        const serverResponse = await axios.get('https://api.github.com/repos/Mytien044/Server/contributors');
         
         const allContributors = [...internshipResponse.data, ...serverResponse.data];
         const uniqueContributors = Array.from(new Set(allContributors.map(c => c.id)))
